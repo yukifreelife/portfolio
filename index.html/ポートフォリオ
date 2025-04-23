@@ -1,0 +1,32 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>ゆうきのポートフォリオ</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">自己紹介</a></li>
+        <li><a href="blog/index.php">ブログ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>こんにちは！ゆうきです。</h2>
+      <p>看護師からエンジニアを目指して学習中。現在はRubyやJavaScript、PHPを中心に勉強しています。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025.04.18 Portfolio</p>
+  </footer>
+</body>
+</html>
