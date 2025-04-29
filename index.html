@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ポートフォリオ - 手作りSPA版</title>
+  <style>
+    /* ここに後でCSSも書けるよ */
+  </style>
+</head>
+<body>
+
+  <!-- ナビゲーション（ページ切り替えボタン） -->
+  <nav>
+    <button id="homeBtn">Home</button>
+    <button id="aboutBtn">About</button>
+    <button id="worksBtn">Works</button>
+  </nav>
+
+  <!-- ページの中身 -->
+  <section id="homeSection">
+    <h1>ようこそ！</h1>
+    <p>ここはHomeページです。</p>
+  </section>
+
+  <section id="aboutSection" style="display:none;">
+    <h1>自己紹介</h1>
+    <p>ここはAboutページです。</p>
+  </section>
+
+  <section id="worksSection" style="display:none;">
+    <h1>作品紹介</h1>
+    <p>ここはWorksページです。</p>
+    <p>新しい作品が完成したら追加予定です。</p>
+  </section>
+
+  <script>
+    // ページ切り替え用のJavaScript
+    const homeBtn = document.getElementById('homeBtn');
+    const aboutBtn = document.getElementById('aboutBtn');
+    const worksBtn = document.getElementById('worksBtn');
+
+    const homeSection = document.getElementById('homeSection');
+    const aboutSection = document.getElementById('aboutSection');
+    const worksSection = document.getElementById('worksSection');
+
+    homeBtn.addEventListener('click', () => {
+      homeSection.style.display = 'block';
+      aboutSection.style.display = 'none';
+      worksSection.style.display = 'none';
+    });
+
+    aboutBtn.addEventListener('click', () => {
+      homeSection.style.display = 'none';
+      aboutSection.style.display = 'block';
+      worksSection.style.display = 'none';
+    });
+
+    worksBtn.addEventListener('click', () => {
+      homeSection.style.display = 'none';
+      aboutSection.style.display = 'none';
+      worksSection.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
