@@ -1,0 +1,11 @@
+# APIキーなどの機密ファイル
+js/pixabay-lorder.js
+
+# 環境変数（将来的に使う場合）
+.env
+
+# Mac特有の不要ファイル
+.DS_Store
+
+# バックアップファイル
+*.log
