@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>温泉詳細ページ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>温泉の旅館一覧</title>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 id="onsen-title">温泉名を読み込み中...</h1>
-    </div>
-  </header>
+  <h1 id="onsen-title">読み込み中...</h1>
 
-  <main class="site-main">
-    <div class="container">
-      <p>ここに旅館一覧などを表示予定です。</p>
-    </div>
-  </main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const onsenId = params.get("id");
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Onsen Portal. All rights reserved.</p>
-    </div>
-  </footer>
+    const onsenNames = {
+      noboribetsu: "登別温泉",
+      naruko: "鳴子温泉",
+      kusatsu: "草津温泉"
+    };
 
-  <!-- JSファイルの読み込み -->
-  <script src="js/onsen.js"></script>
+    const titleEl = document.getElementById("onsen-title");
+    if (onsenId && onsenNames[onsenId]) {
+      titleEl.textContent = `${onsenNames[onsenId]}の旅館一覧`;
+    } else {
+      titleEl.textContent = "温泉情報が見つかりませんでした";
+    }
+  </script>
 </body>
 </html>
