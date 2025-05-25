@@ -3,18 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>温泉の旅館一覧</title>
+  <title>温泉の見どころ＆旅館情報</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/onsen.css">
+
 </head>
 <body>
-  <h1 id="onsen-title">読み込み中...</h1>
+  <header class="site-header">
+    <div class="container">
+      <nav class="main-nav">
+        <a href="index.html">ホーム</a>
+        <a href="onsen.html?id=beppu">旅館</a>
+      </nav>
+      <h1 id="onsen-title">全国温泉ポータル</h1>
+      <p class="subtitle">癒しの温泉地から旅館までサポート</p>
+    </div>
+  </header>
+  
+
+  <main class="site-main">
+    
+    <div class="container">
+      <div id="onsen-description" class="subtitle onsen-description-box">紹介文を読み込み中...</div>
+
+      <section id="onsen-info" class="onsen-info"></section>
+      <section id="onsen-links" class="onsen-links"></section>      
+    </div>
+  </main>
 
   <footer class="site-footer">
     <p>&copy; 2025 Onsen Portal. All rights reserved.</p>
   </footer>
 
-    <!-- 🔽 順番に注意！ -->
+  <!-- JS読み込み -->
   <script src="js/onsenData.js"></script>
   <script src="js/onsen.js"></script>
 </body>
-
 </html>

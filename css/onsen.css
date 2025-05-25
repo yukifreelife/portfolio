@@ -1,0 +1,58 @@
+/* onsen.css */
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-top: 0.5rem;
+  }
+  
+  .onsen-info {
+    background: linear-gradient(to bottom right, #f4f7fa, #e6ecf5);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .onsen-info img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+  }
+  
+  .onsen-info iframe {
+    border: none;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+  }
+  
+  .onsen-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+  
+  .onsen-links {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .onsen-description-box {
+    background-color: #eef4ff;
+    border-left: 6px solid #3f87a6;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem auto;
+    max-width: 800px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  

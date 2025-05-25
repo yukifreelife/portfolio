@@ -1,0 +1,86 @@
+/* index.css */
+
+.onsen-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .onsen-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .onsen-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .onsen-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .onsen-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1.2rem;
+    flex-grow: 1;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  
+  .card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  /* レスポンシブ */
+  @media (max-width: 1024px) {
+    .onsen-card {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .onsen-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .onsen-card {
+      width: 90%;
+    }
+  
+    .site-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .card-content h3 {
+      font-size: 1.1rem;
+    }
+  
+    .card-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
