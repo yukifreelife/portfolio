@@ -8,22 +8,13 @@
 <body>
   <h1 id="onsen-title">読み込み中...</h1>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const onsenId = params.get("id");
+  <footer class="site-footer">
+    <p>&copy; 2025 Onsen Portal. All rights reserved.</p>
+  </footer>
 
-    const onsenNames = {
-      noboribetsu: "登別温泉",
-      naruko: "鳴子温泉",
-      kusatsu: "草津温泉"
-    };
-
-    const titleEl = document.getElementById("onsen-title");
-    if (onsenId && onsenNames[onsenId]) {
-      titleEl.textContent = `${onsenNames[onsenId]}の旅館一覧`;
-    } else {
-      titleEl.textContent = "温泉情報が見つかりませんでした";
-    }
-  </script>
+    <!-- 🔽 順番に注意！ -->
+  <script src="js/onsenData.js"></script>
+  <script src="js/onsen.js"></script>
 </body>
+
 </html>

@@ -57,18 +57,23 @@ body {
 /* ===== 各カード ===== */
 .onsen-card {
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   width: 300px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
-.onsen-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.onsen-link {
+  display: contents; /* 中の要素をそのまま展開して、aの外枠を消す */
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
 }
 
 .onsen-card img {
@@ -76,6 +81,12 @@ body {
   height: 200px;
   object-fit: cover;
 }
+
+.onsen-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 
 /* ===== カード内テキスト ===== */
 .card-content {
