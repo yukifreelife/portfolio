@@ -21,18 +21,73 @@
     </div>
   </header>
 
-  <main>
-    <h2>温泉地を選ぶ</h2>
-    <div class="onsen-list" id="onsenList"></div>
-  </main>
+  <main class="site-main">
+    <div class="main-layout">
+      
+      <!-- 🔍 左側：検索サイドバー -->
+      <aside class="search-sidebar">
+        <h2>♨️ 温泉を探す</h2>
+        <p style="font-size: 0.85rem; color: #555;">名前を入力して検索できます</p>
+        <input type="text" placeholder="温泉名を入力" />
+        <button class="search-button">検索</button>
+  
+        <hr style="margin: 1rem 0;" />
+  
+        <div class="filter-section">
+          <h3>▼ 絞り込み検索</h3>
+          <div class="filter-section">
+            <label for="泉質">泉質で絞り込む</label>
+            <select id="泉質" class="filter-select">
+              <option value="">選択してください</option>
+              <option value="塩化物泉">塩化物泉</option>
+              <option value="硫黄泉">硫黄泉</option>
+              <option value="炭酸水素塩泉">炭酸水素塩泉</option>
+              <option value="単純温泉">単純温泉</option>
+              <option value="放射能泉">放射能泉</option>
+              <option value="含鉄泉">含鉄泉</option>
+            </select>
+          
+            <h3>湧出量で絞り込む</h3>
+            <select class="filter-select">
+              <option value="">選択してください</option>
+              <option value="多い">多い</option>
+              <option value="中くらい">中くらい</option>
+              <option value="少ない">少ない</option>
+            </select>
+          
+            <h3>都道府県で絞り込む</h3>
+            <select class="filter-select">
+              <option value="">選択してください</option>
+              <option value="北海道">北海道</option>
+              <option value="宮城県">宮城県</option>
+              <option value="群馬県">群馬県</option>
+              <option value="岐阜県">岐阜県</option>
+              <option value="兵庫県">兵庫県</option>
+              <option value="鳥取県">鳥取県</option>
+              <option value="愛媛県">愛媛県</option>
+              <option value="大分県">大分県</option>
+            </select>
+          </div>
+          
+            
+        </div>
+      </aside>
+
+      <!-- 🧖‍♂️ 右側：温泉カード一覧 -->
+      <section class="onsen-list" id="onsenList">
+        <!-- JSで温泉カードが入る -->
+      </section>    
+      
+    </div>
+  </main>    
 
   <footer class="site-footer">
     <p>&copy; 2025 Onsen Portal. All rights reserved.</p>
   </footer>
 
   <script src="js/onsenData.js"></script>
-　<script src="js/pixabay-loader.js"></script>
-　<script src="js/main.js"></script>
+  <script src="js/pixabay-loader.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>

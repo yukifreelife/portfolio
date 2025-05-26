@@ -82,5 +82,96 @@
     .card-content p {
       font-size: 0.9rem;
     }
+
+    .search-sidebar {
+        width: 240px;
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        font-size: 0.95rem;
+        color: #333;
+      }
+      
+      /* タイトル */
+      .sidebar-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #3f87a6;
+      }
+      
+      /* 入力フォーム */
+      .search-input {
+        width: 100%;
+        padding: 0.6rem;
+        margin-bottom: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      /* 検索ボタン */
+      .search-button {
+        width: 100%;
+        padding: 0.6rem;
+        background-color: #4364f7;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+      
+      .search-button:hover {
+        background-color: #314ad3;
+      }
+      
+      /* 絞り込み見出し */
+      .filter-section {
+        margin-top: 2rem;
+      }
+      
+      .filter-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+      
+      .filter-list {
+        list-style: none;
+        padding-left: 1rem;
+        color: #555;
+      }
+
+      .filter-select {
+        width: 100%;
+        padding: 0.6rem 0.8rem;
+        margin-bottom: 1.2rem;
+        font-size: 0.95rem;
+        border: 1px solid #aac6f9;
+        border-radius: 6px;
+        background-color: #f9fbff;
+        color: #333;
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 0.8rem center;
+        background-size: 1rem;
+        box-shadow: 0 0 0 0 transparent;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .filter-select:hover {
+        border-color: #4364f7;
+        box-shadow: 0 0 0 3px rgba(67, 100, 247, 0.2);
+      
+      .filter-select:focus {
+        outline: none;
+        border-color: #4364f7;
+        box-shadow: 0 0 0 3px rgba(67, 100, 247, 0.2);
+      }
+      
+      
   }
   

@@ -80,4 +80,66 @@
     font-size: 0.9rem;
     margin-top: 3rem;
   }
+
+  /* ===== メインレイアウト（左右分割） ===== */
+.main-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem 2rem;
+    
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box; 
+  }
+  
+  /* 🔍 左：検索フォーム */
+  .search-sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+  
+  .search-sidebar h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .search-sidebar input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-sidebar button {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #4364f7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-sidebar button:hover {
+    background-color: #314ad3;
+  }
+  
+  /* 🧖‍♂️ 右：温泉リスト（既存のonsen-cardのCSSを流用） */
+  .onsen-list {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+  
   
