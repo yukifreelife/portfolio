@@ -1,200 +1,190 @@
 /* index.css */
 
 .onsen-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.onsen-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.onsen-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.onsen-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.onsen-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.2rem;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* レスポンシブ */
+@media (max-width: 1024px) {
+  .onsen-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .onsen-list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    order: 1;
+  }
+
+  .onsen-card {
+    width: 90%;
+    margin: 0 auto 2rem;
+  }
+
+  .site-header h1 {
     font-size: 1.8rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .search-sidebar {
+    width: 100%;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    color: #333;
     margin-bottom: 1.5rem;
-    text-align: center;
+    order: 0;
+  }
+
+  .sidebar-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #3f87a6;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #4364f7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-button:hover {
+    background-color: #314ad3;
+  }
+
+  .filter-section {
+    margin-top: 2rem;
+  }
+
+  .filter-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
     color: #333;
   }
-  
-  .onsen-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+
+  .filter-list {
+    list-style: none;
+    padding-left: 1rem;
+    color: #555;
   }
-  
-  .onsen-card {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .filter-select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    border: 1px solid #aac6f9;
+    border-radius: 6px;
+    background-color: #f9fbff;
+    color: #333;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1rem;
+    box-shadow: 0 0 0 0 transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .filter-select:hover,
+  .filter-select:focus {
+    border-color: #4364f7;
+    box-shadow: 0 0 0 3px rgba(67, 100, 247, 0.2);
+    outline: none;
+  }
+
+  .main-layout {
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 2rem;
   }
-  
-  .onsen-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  .onsen-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-content {
-    padding: 1.2rem;
-    flex-grow: 1;
-  }
-  
-  .card-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #222;
-  }
-  
-  .card-content p {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 1rem;
-  }
-  
-  /* レスポンシブ */
-  @media (max-width: 1024px) {
-    .onsen-card {
-      width: 45%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .onsen-list {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .onsen-card {
-      width: 90%;
-    }
-  
-    .site-header h1 {
-      font-size: 1.8rem;
-    }
-  
-    .card-content h3 {
-      font-size: 1.1rem;
-    }
-  
-    .card-content p {
-      font-size: 0.9rem;
-    }
+}
 
-    .search-sidebar {
-        width: 240px;
-        background-color: #fff;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        font-size: 0.95rem;
-        color: #333;
-      }
-      
-      /* タイトル */
-      .sidebar-title {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        color: #3f87a6;
-      }
-      
-      /* 入力フォーム */
-      .search-input {
-        width: 100%;
-        padding: 0.6rem;
-        margin-bottom: 0.8rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      
-      /* 検索ボタン */
-      .search-button {
-        width: 100%;
-        padding: 0.6rem;
-        background-color: #4364f7;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-      
-      .search-button:hover {
-        background-color: #314ad3;
-      }
-      
-      /* 絞り込み見出し */
-      .filter-section {
-        margin-top: 2rem;
-      }
-      
-      .filter-title {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-        color: #333;
-      }
-      
-      .filter-list {
-        list-style: none;
-        padding-left: 1rem;
-        color: #555;
-      }
-
-      .filter-select {
-        width: 100%;
-        padding: 0.6rem 0.8rem;
-        margin-bottom: 1.2rem;
-        font-size: 0.95rem;
-        border: 1px solid #aac6f9;
-        border-radius: 6px;
-        background-color: #f9fbff;
-        color: #333;
-        cursor: pointer;
-        appearance: none;
-        background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-        background-repeat: no-repeat;
-        background-position: right 0.8rem center;
-        background-size: 1rem;
-        box-shadow: 0 0 0 0 transparent;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .filter-select:hover {
-        border-color: #4364f7;
-        box-shadow: 0 0 0 3px rgba(67, 100, 247, 0.2);
-      
-      .filter-select:focus {
-        outline: none;
-        border-color: #4364f7;
-        box-shadow: 0 0 0 3px rgba(67, 100, 247, 0.2);
-      }
-            /* 💻 PC（768px以上）：左右分割 */
-      .main-layout {
-        display: flex;
-        align-items: flex-start;
-        gap: 2rem;
-      }
-
-      /* 📱 スマホ・タブレット（768px未満）：上下表示に切り替え */
-      @media (max-width: 768px) {
-        .main-layout {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .search-sidebar {
-          width: 100%;
-          margin-bottom: 1.5rem;
-        }
-
-        .onsen-list {
-          justify-content: center;
-        }
-      }
-
-      
+/* デスクトップ用メインレイアウト */
+@media (min-width: 769px) {
+  .main-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
   }
-  
+}
