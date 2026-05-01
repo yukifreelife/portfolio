@@ -1,4 +1,4 @@
-const PIXABAY_API_KEY = '50356956-3cbefdb1d3e812503c7824d83'; // ← あなたのAPIキーを入力
+const PIXABAY_API_KEY = import.meta.env.VITE_PIXABAY_KEY;
 const onsenList = document.querySelectorAll('.onsen-card');
 
 onsenList.forEach((card) => {
