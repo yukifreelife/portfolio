@@ -6,7 +6,7 @@
   <title>全国温泉一覧ポータル</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/pages/index.css">
 
 </head>
 <body>
@@ -27,16 +27,16 @@
       <aside class="search-sidebar">
         <h2>♨️ 温泉を探す</h2>
         <p style="font-size: 0.85rem; color: #555;">名前を入力して検索できます</p>
-        <input type="text" placeholder="温泉名を入力" />
-        <button class="search-button">検索</button>
+        <input type="text" id="search-input" placeholder="温泉名を入力" />
+        <button id="search-button" class="search-button">検索</button>
   
         <hr style="margin: 1rem 0;" />
   
         <div class="filter-section">
           <h3>▼ 絞り込み検索</h3>
           <div class="filter-section">
-            <label for="泉質">泉質で絞り込む</label>
-            <select id="泉質" class="filter-select">
+            <label for="filter-type">泉質で絞り込む</label>
+            <select id="filter-type" class="filter-select">
               <option value="">選択してください</option>
               <option value="塩化物泉">塩化物泉</option>
               <option value="硫黄泉">硫黄泉</option>
@@ -55,7 +55,7 @@
             </select>
           
             <h3>都道府県で絞り込む</h3>
-            <select class="filter-select">
+            <select id="filter-pref" class="filter-select">
               <option value="">選択してください</option>
               <option value="北海道">北海道</option>
               <option value="宮城県">宮城県</option>
@@ -84,8 +84,8 @@
     <p>&copy; 2025 Onsen Portal. All rights reserved.</p>
   </footer>
 
-  <script src="js/onsenData.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/date/onsenData.js"></script>
+  <script src="js/pages/main.js"></script>
 
 </body>
 </html>
